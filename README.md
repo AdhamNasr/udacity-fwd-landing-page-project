@@ -62,7 +62,7 @@ The main goal of the project is to have a landing page with static content, and 
 
 ## Content
 
-css/styles.css    
-js/app.js
-index.html
-README.md
+[css/styles.css](#https://github.com/AdhamNasr/FWD-Scholarship/blob/main/css/style.css)\
+[js/app.js](#https://github.com/AdhamNasr/FWD-Scholarship/blob/main/js/app.js)\
+[README.md](#https://github.com/AdhamNasr/FWD-Scholarship)\
+[index.html](#https://github.com/AdhamNasr/FWD-Scholarship/blob/main/index.html)
