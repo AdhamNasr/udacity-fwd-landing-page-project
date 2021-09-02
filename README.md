@@ -2,12 +2,67 @@
  
 ## Table of Contents
 
-* [Project Details](#Project Details)
+* [Info](#Info)
+* [Goals](#Goals)
+* [To-Do](#To-Do)
+* [Content](#Content)
 
-## Project Details
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
 
-To get started, open `js/app.js` and start building out the app's functionality
+## Instructions
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+The starter project had some HTML and CSS styling to display a static version of the Landing Page project. I basically had to it from a static project to an interactive one. It required modifying the HTML and CSS files, but was mainly focused on building the JavaScript file from scratch.
+
+This is my 2nd draft so far, because my 1st one was the very first take i take in building a JavaScript file, and it didn't quite run the way I thought it would.
+
+Although I'm still facing some issues, i have decided to upload the 1st proper draft and commit all changes as I code my way till the end.
+
+## Goals
+
+The main goal of the project is to have a landing page with static content, and then manipulate some of the static content using JS & DOM to finally have a dynamic page; the following are the requirements to pass the project, with some non-essential extras at the bottom.
+
+### Interface and Architecture:
+
+- The app must successfully render a home page with clear design and functionality added when index.html is loaded in the browser. No errors should display in console.
+- All features are usable across modern desktop, tablet, and phone browsers.
+- There should be at least 4 sections added to the page.
+
+### Landing Page Behavior:
+
+- Navigation should be built dynamically as an unordered list. Starting with empty ul and dynamically build navigation using Append, appendChild, and innerHTML.
+- It should be clear which section is being viewed/active while scrolling through the page.
+- When clicking an item from the navigation menu, the link should scroll to the appropriate section.
+
+### Documentation:
+
+- The ReadMe file should replace the given texts on the README template with specific information for this project. It doesn’t have to be thorough, but should have some basic information, eg. project description, usage, dependencies, and use correct the markdown syntax.
+- Comments are present and effectively explain longer code procedures as described in the Udacity JavaScript Style Guide - Comments.
+- Code is formatted with consistent, logical, and easy-to-read formatting as described in the Udacity JavaScript Style Guide - Code Formatting.
+
+### Non-Essential Extras:
+
+- Add an active state to your navigation items when a section is in the viewport.
+- Hide fixed navigation bar while not scrolling (it should still be present on page load).
+    Hint: setTimeout can be used to check when the user is no longer scrolling.
+- Add a scroll to top button on the page that’s only visible when the user scrolls below the fold of the page.
+- Update/change the design/content.
+- Make sections collapsible.
+
+## To-Do
+
+- [x] Build navigation bar with vanilla JS, and have sections\articles auto-populate once added to the page
+- [ ] Add active state to sections/articles
+- [x] Auto-scrolling when item is clicked in navigation bar
+- [x] ReadMe File/Documentation
+- [ ] Add active state to navigation bar
+- [ ] Hide navigation bar while not scrolling
+- [x] Scroll-to-top button
+- [x] Update/change design
+- [ ] Make sections collapsible
+
+## Content
+
+css/styles.css    
+js/app.js
+index.html
+README.md
