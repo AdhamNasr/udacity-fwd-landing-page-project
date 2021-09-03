@@ -58,16 +58,15 @@ section {
 }
 
 .navbar-menu li {
-    display: inline;
+    display: inline-block;
     margin-right: 50px;
 }
-/*
-.navbar-menu .menu-link {
-    display: block;
-    padding: 1em;
+
+/*.navbar-menu .menu-link {
+    display: inline-block;
+    padding: 5em;
     font-weight: bold;
-    text-decoration: none;
-    color: #000;
+    text-decoration: aliceblue;
 }
 
 .navbar-menu .menu-link:hover {
@@ -193,17 +192,17 @@ section:nth-of-type(3n + 1) .landing-container::after {
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
-section.active-class {
+section .active-class {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 99, 248, 0) 0%, rgba(10, 11, 20, 0.37) 100%);
 }
 
-section.active-class .landing-container::before {
+section .active-class .landing-container::before {
     opacity: 1;
     animation: rotate 4s linear 10s infinite forwards;
 }
 
-section.active-class .landing-container::after {
+section .active-class .landing-container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
@@ -221,7 +220,6 @@ section.active-class .landing-container::after {
 		           rotate(-360deg);
 	}
 }
-
 
 /* Scroll Button & Scroll Behavior */
 #scrollBtn {
@@ -246,7 +244,8 @@ section.active-class .landing-container::after {
 #section {
     scroll-margin-top: 50px;
 }
-
+/*
 html {
     scroll-behavior: smooth;
 }
+*/
