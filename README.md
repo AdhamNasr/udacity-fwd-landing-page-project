@@ -2,13 +2,12 @@
  
 ## Table of Contents
 
-* [Info](#Info)
+* [Instructions](#Instructions)
 * [Goals](#Goals)
 * [To-Do](#To-Do)
 * [Content](#Content)
 
-
-
+-----
 ## Instructions
 
 The starter project had some HTML and CSS styling to display a static version of the Landing Page project. I basically had to transform it from a static project to an interactive one. It required modifying the HTML and CSS files, but was mainly focused on building the JavaScript file from scratch.
@@ -36,8 +35,8 @@ The main goal of the project is to have a landing page with static content, then
 ### Documentation:
 
 - The ReadMe file should replace the given text on the README template with specific information for this project. It doesn’t have to be thorough but should have some basic information, eg. project description, usage, dependencies, and use correct the markdown syntax.
-- Comments are present and effectively explain longer code procedures as described in the [Udacity JavaScript Style Guide - Comments](#http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#comments).
-- Code is formatted with consistent, logical, and easy-to-read formatting as described in the [Udacity JavaScript Style Guide - Code Formatting](#http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#formatting).
+- Comments are present and effectively explain longer code procedures as described in the [Udacity JavaScript Style Guide - Comments](#http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#comments)
+- Code is formatted with consistent, logical, and easy-to-read formatting as described in the [Udacity JavaScript Style Guide - Code Formatting](#http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#formatting)
 
 ### Non-Essential Extras:
 
@@ -63,7 +62,7 @@ The main goal of the project is to have a landing page with static content, then
 
 ## Content
 
-[css/styles.css](#https://github.com/AdhamNasr/FWD-Scholarship/blob/main/css/style.css)\
-[js/app.js](#https://github.com/AdhamNasr/FWD-Scholarship/blob/main/js/app.js)\
-[README.md](#https://github.com/AdhamNasr/FWD-Scholarship)\
+[css/styles.css](#https://github.com/AdhamNasr/FWD-Scholarship/blob/main/css/style.css) \
+[js/app.js](#https://github.com/AdhamNasr/FWD-Scholarship/blob/main/js/app.js) \
+[README.md](#https://github.com/AdhamNasr/FWD-Scholarship) \
 [index.html](#https://github.com/AdhamNasr/FWD-Scholarship/blob/main/index.html)
