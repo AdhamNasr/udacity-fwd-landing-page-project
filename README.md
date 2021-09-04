@@ -2,13 +2,13 @@
  
 ## Table of Contents
 
-* [Instructions](#Instructions)
+* [Introduction](#Introduction)
 * [Goals](#Goals)
 * [To-Do](#To-Do)
 * [Content](#Content)
 
 -----
-## Instructions
+## Introduction
 
 The starter project had some HTML and CSS styling to display a static version of the Landing Page project. I basically had to transform it from a static project to an interactive one. It required modifying the HTML and CSS files, but was mainly focused on building the JavaScript file from scratch.
 
