@@ -43,7 +43,7 @@ for (const section of sections) {
 function dimFunction() {
   for (let section of sections) {
     const sectionDim = section.getBoundingClientRect();
-    //const sectionTitle = section.getAttribute("data-nav");
+    const sectionTitle = section.getAttribute("data-nav");
   
 
     let links = document.querySelectorAll("li");
@@ -55,7 +55,7 @@ function dimFunction() {
         if (link.innerText === section.getAttribute("data-nav")) {
           link.classList.remove("active-class");
           console.log(link.innerText, section.getAttribute("data-nav"));
-          //console.log(2);
+          console.log(2);
         } else {
           link.classList.add("active-class");
           console.log(3);
@@ -66,7 +66,6 @@ function dimFunction() {
 }
 
 /* scroll button */
-
 
 function scrollFunctionBtn() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {

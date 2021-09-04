@@ -159,12 +159,12 @@ section.active-class {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-section.active-class .landing__container::before {
+section.active-class .landing-container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.active-class .landing__container::after {
+section.active-class .landing-container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
