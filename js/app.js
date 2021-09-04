@@ -10,6 +10,7 @@ const header = document.querySelector(".page-header");
 window.onscroll = function () {
   scrollFunctionBtn();
   scrollFunctionSolid();
+  dimFunction();
 };
 
 // Main Functions
@@ -39,6 +40,30 @@ for (const section of sections) {
 
 /* Section Active state */
 
+function dimFunction() {
+  for (let section of sections) {
+    const sectionDim = section.getBoundingClientRect();
+    //const sectionTitle = section.getAttribute("data-nav");
+  
+
+    let links = document.querySelectorAll("li");
+    if (sectionDim.top >= 0 && sectionDim.top < 300) {
+      console.log(1);
+
+      for (let link of links) {
+        
+        if (link.innerText === section.getAttribute("data-nav")) {
+          link.classList.remove("active-class");
+          console.log(link.innerText, section.getAttribute("data-nav"));
+          //console.log(2);
+        } else {
+          link.classList.add("active-class");
+          console.log(3);
+        }
+      }
+    }
+  }
+}
 
 /* scroll button */
 
@@ -52,7 +77,7 @@ function scrollFunctionBtn() {
 }
 
 function topFunction() {
-  document.body.scrollTop = 0;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
   document.documentElement.scrollTop = 0;
 }
 
