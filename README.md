@@ -40,7 +40,7 @@ The main goal of the project is to have a landing page with static content, then
 
 ### Non-Essential Extras:
 
-- Add an active state to your navigation items when a section is in the viewport.
+- Add an active state to the navigation items when a section is in the viewport.
 - Hide fixed navigation bar while not scrolling (it should still be present on page load).
     Hint: setTimeout can be used to check when the user is no longer scrolling.
 - Add a scroll to top button on the page that’s only visible when the user scrolls below the fold of the page.
@@ -55,7 +55,7 @@ The main goal of the project is to have a landing page with static content, then
 - [x] Smooth scrolling
 - [x] ReadMe File/Documentation.
 - [ ] Add active state to navigation bar.
-- [ ] Hide navigation bar while not scrolling.
+- [x] Hide navigation bar while not scrolling.
 - [x] Scroll-to-top button.
 - [x] Update/change design.
 - [ ] Make sections collapsible.
