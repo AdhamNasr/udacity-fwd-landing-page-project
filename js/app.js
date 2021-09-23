@@ -4,7 +4,10 @@ const sections = document.querySelectorAll("section");
 const menuItems = document.getElementById("navbar-list");
 const button = document.getElementById("scrollBtn");
 const header = document.querySelector(".page-header");
-//const nlinks = document.querySelectorAll(".navbar-menu ul li a");
+
+
+
+
 
 
 // Helper Functions
@@ -13,7 +16,7 @@ window.onscroll = function () {
   scrollFunctionBtn();
   scrollFunctionSolid();
   dimFunction();
-  //navHighlight();
+  navHighlight();
 };
 
 
@@ -23,7 +26,7 @@ window.onscroll = function () {
 
 for (const section of sections) {
   const items = document.createElement("li");
-  const ml = document.createElement("a");
+  let ml = document.createElement("a");
   menuItems.appendChild(items);
   items.appendChild(ml);
   ml.innerHTML = section.getAttribute("data-nav");
@@ -31,25 +34,51 @@ for (const section of sections) {
   ml.href = location.hash;
 }
 
+
 /* Navbar solidify on scroll */
 
+
 function scrollFunctionSolid() {
-  if (document.body.scrollTop >= 300) {
-    header.classList.add("active");
+  if (document.body.scrollTop >= 100) {
+    header.classList.add("activeh");
   } else {
-    header.classList.remove("active");
+    header.classList.remove("activeh");
   }
 }
 
 
 /* Navbar highlight active */
 
+
+function navHighlight() {
+  const nLinks = document.querySelectorAll("li");
+  
+  let current = "";
+  for (const section of sections) {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight) {
+      current = section.getAttribute("data-nav");
+    }
+  nLinks.innerText = section.getAttribute("a");
+  };
+  console.log(current)
+  console.log(nLinks)
+  nLinks.forEach((li) => {
+    li.classList.remove("active");
+    if (li.classList.contains(current)) {
+      li.classList.add("active");
+    }
+    
+  });
+}
+
 /* Active class Function */
 
 function dimFunction() {
   for (const section of sections) {
     const sectionDim = section.getBoundingClientRect();
-    if (sectionDim.bottom >= 300 & sectionDim.top <= 300) {
+    if (sectionDim.bottom >= 350 & sectionDim.top <= 350) {
       section.classList.add("active-class");
     } else {
       section.classList.remove("active-class");
@@ -92,3 +121,4 @@ function clickHandler(e) {
     behavior: "smooth",
   });
 }
+

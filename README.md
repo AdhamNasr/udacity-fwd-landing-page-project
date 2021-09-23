@@ -50,12 +50,13 @@ The main goal of the project is to have a landing page with static content, then
 ## To-Do
 
 - [x] Build navigation bar with vanilla JS, and have sections\articles auto-populate once added to the page.
-- [x] Add active state to sections/articles; Still needs some extra work.
+- [x] Add active state to sections/articles.
 - [x] Auto-scrolling when item is clicked in navigation bar.
 - [x] Smooth scrolling
 - [x] ReadMe File/Documentation.
-- [ ] Add active state to navigation bar.
-- [x] Hide navigation bar while not scrolling.
+- [-] Add active state to navigation bar.
+        - nearly got it, need "nLinks" to show proper result as currnt!
+- [ ] Hide navigation bar while not scrolling.
 - [x] Scroll-to-top button.
 - [x] Update/change design.
 - [ ] Make sections collapsible.
