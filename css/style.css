@@ -82,23 +82,16 @@ nav.navbar-menu ul li a {
     transition: 5s ease;
 }
 
-#navbar-list.active {
-    display: inline-block;
+ul li a.active {
+    display: inline-flex;
     text-align: center;
     text-decoration: underline;
     padding-inline: 2px;
     background-color: rgb(255, 0, 0);
     transition: 5s ease;
 }
-/*
-.navbar-menu ul li.active {
-    background-color: crimson;
-    transition: 0.3s ease background-color;
-  }
-.navbar-menu ul li.active a {
-    color: rgb(255, 255, 255);
-  }
-*/
+
+
 /* Header Styles */
 
 .page-header {
@@ -113,7 +106,7 @@ nav.navbar-menu ul li a {
     transition: 5s ease;
 }
 
-.page-header.activeh {
+.page-header.active {
     background: rgba(0, 0, 0, 0.884);
     position: fixed;
     text-align: center;

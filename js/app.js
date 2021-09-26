@@ -5,30 +5,23 @@ const menuItems = document.getElementById("navbar-list");
 const button = document.getElementById("scrollBtn");
 const header = document.querySelector(".page-header");
 
-
-
-
-
-
 // Helper Functions
 
 window.onscroll = function () {
   scrollFunctionBtn();
   scrollFunctionSolid();
   dimFunction();
-  navHighlight();
 };
-
 
 // Main Functions
 
 /* Navbar */
 
 for (const section of sections) {
-  const items = document.createElement("li");
+  const li = document.createElement("li");
   let ml = document.createElement("a");
-  menuItems.appendChild(items);
-  items.appendChild(ml);
+  menuItems.appendChild(li);
+  li.appendChild(ml);
   ml.innerHTML = section.getAttribute("data-nav");
   location.hash = section.id;
   ml.href = location.hash;
@@ -40,19 +33,23 @@ for (const section of sections) {
 
 function scrollFunctionSolid() {
   if (document.body.scrollTop >= 100) {
-    header.classList.add("activeh");
+    header.classList.add("active");
   } else {
-    header.classList.remove("activeh");
+    header.classList.remove("active");
   }
 }
 
+/* Active class Function & Navbar highlight active*/
 
-/* Navbar highlight active */
-
-
-function navHighlight() {
-  const nLinks = document.querySelectorAll("li");
-  
+function dimFunction() {
+  for (const section of sections) {
+    const sectionDim = section.getBoundingClientRect();
+    if (sectionDim.bottom >= 450 & sectionDim.top <= 450) {
+      section.classList.add("active-class");
+    } else {
+      section.classList.remove("active-class");
+    }
+  }
   let current = "";
   for (const section of sections) {
     const sectionTop = section.offsetTop;
@@ -60,32 +57,19 @@ function navHighlight() {
     if (pageYOffset >= sectionTop - sectionHeight) {
       current = section.getAttribute("data-nav");
     }
-  nLinks.innerText = section.getAttribute("a");
   };
-  console.log(current)
-  console.log(nLinks)
+  const nLinks = document.querySelectorAll("a");
   nLinks.forEach((li) => {
-    li.classList.remove("active");
+    console.log(li)
     if (li.classList.contains(current)) {
       li.classList.add("active");
+    } else {
+      li.classList.remove("active");
     }
-    
+    console.log(current)
+    console.log(nLinks)
   });
 }
-
-/* Active class Function */
-
-function dimFunction() {
-  for (const section of sections) {
-    const sectionDim = section.getBoundingClientRect();
-    if (sectionDim.bottom >= 350 & sectionDim.top <= 350) {
-      section.classList.add("active-class");
-    } else {
-      section.classList.remove("active-class");
-    }
-  }
-}
-
 
 /* scroll button */
 
@@ -104,7 +88,8 @@ function topFunction() {
 
 /* Smooth Scrolling */
 
-const links = document.querySelectorAll("ul a");
+
+const links = document.querySelectorAll("ul li a");
 
 for (const link of links) {
   link.addEventListener("click", clickHandler);
@@ -121,4 +106,3 @@ function clickHandler(e) {
     behavior: "smooth",
   });
 }
-
