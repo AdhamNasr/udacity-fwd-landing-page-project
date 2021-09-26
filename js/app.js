@@ -5,6 +5,7 @@ const menuItems = document.getElementById("navbar-list");
 const button = document.getElementById("scrollBtn");
 const header = document.querySelector(".page-header");
 
+
 // Helper Functions
 
 window.onscroll = function () {
@@ -27,9 +28,7 @@ for (const section of sections) {
   ml.href = location.hash;
 }
 
-
 /* Navbar solidify on scroll */
-
 
 function scrollFunctionSolid() {
   if (document.body.scrollTop >= 100) {
@@ -42,33 +41,23 @@ function scrollFunctionSolid() {
 /* Active class Function & Navbar highlight active*/
 
 function dimFunction() {
-  for (const section of sections) {
+  for (let section of sections) {
     const sectionDim = section.getBoundingClientRect();
+    const sectionTitle = section.getAttribute("data-nav");
+    let nLinks = document.querySelectorAll("li");
     if (sectionDim.bottom >= 450 & sectionDim.top <= 450) {
       section.classList.add("active-class");
+      for (let link of links) {
+        if (link.innerText !== section.getAttribute("data-nav")) {
+          link.classList.remove("active");
+        } else {
+          link.classList.add("active");
+        }
+      }
     } else {
       section.classList.remove("active-class");
     }
   }
-  let current = "";
-  for (const section of sections) {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - sectionHeight) {
-      current = section.getAttribute("data-nav");
-    }
-  };
-  const nLinks = document.querySelectorAll("a");
-  nLinks.forEach((li) => {
-    console.log(li)
-    if (li.classList.contains(current)) {
-      li.classList.add("active");
-    } else {
-      li.classList.remove("active");
-    }
-    console.log(current)
-    console.log(nLinks)
-  });
 }
 
 /* scroll button */
@@ -88,8 +77,7 @@ function topFunction() {
 
 /* Smooth Scrolling */
 
-
-const links = document.querySelectorAll("ul li a");
+const links = document.querySelectorAll("ul li a"); // this breaks everything when moved to the global var section.
 
 for (const link of links) {
   link.addEventListener("click", clickHandler);

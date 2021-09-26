@@ -54,8 +54,7 @@ The main goal of the project is to have a landing page with static content, then
 - [x] Auto-scrolling when item is clicked in navigation bar.
 - [x] Smooth scrolling
 - [x] ReadMe File/Documentation.
-- [-] Add active state to navigation bar.
-        - nearly got it, need "nLinks" to show proper result as currnt!
+- [x] Add active state to navigation bar.
 - [ ] Hide navigation bar while not scrolling.
 - [x] Scroll-to-top button.
 - [x] Update/change design.
